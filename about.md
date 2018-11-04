@@ -4,12 +4,10 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I am a Research Engineer at Samsung Research Institute Bangalore, India. I am planning to post about AI stuffs by learning first and then writing it down to my blog. I request everyone to correct me whenever I am wrong that will help me alot.
+Thank you, now let's dive into the numerous hidden layers to get the concrete information about AI.
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[vishalvatsalya7@gmail.com](mailto:vishalvatsalya7@gmail.com)
