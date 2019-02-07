@@ -1,0 +1,10 @@
+---
+layout: post
+title: Understanding the gradients for the backward pass of Batch Normalization
+date:       2019-02-07 11:11:00
+author:     "vishalvatsalya7"
+---
+
+I recently did an assignment of CS231n stanford course where I was required to derive the gradients for backward pass of Batch Normalization. In this blog post, I will try to explain how I derived the desired gradients from scratch.
+So, first I will go through the algorithm of Batch Normalization and how to perform the forward pass with the implementation in Python.
+
