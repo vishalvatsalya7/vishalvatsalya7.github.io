@@ -41,5 +41,61 @@ def batchnorm_forward(x, gamma, beta, eps):
 ```
 
 We have stored the necessary intermediate components which will be required in backward pass.
+
+---
+
+### Backward pass
+
+In backward pass, we will calculate the gradients of the learnable parameters through which we can deduce that by how much factor those parameters are ultimately effecting the Loss and thus the gradients calculated will help in updating those parameters to improve the performance of the network. So, we will be calculating the following gradients: $$\frac{\partial C}{\partial x_i}$$,  $$\frac{\partial C}{\partial \gamma}$$ and  $$\frac{\partial C}{\partial \beta}$$.
+
+Implementation in Python :
+
+```python
+def batchnorm_backward(dout, cache):
+
+    #dout is the upstream derivative
+    dx, dgamma, dbeta = None, None, None
+    xhat,xmu,inv_var,gamma = cache
+    (N,D) = dout.shape
+    dxhat = dout * gamma
+    
+    dbeta = np.sum(dout, axis=0)
+    dgamma = np.sum(dout*xhat, axis=0)
+    dx = (1./N)*(inv_var)*((N*dxhat)-(np.sum(dxhat, axis=0))-xhat*(np.sum(dxhat*xhat, axis=0)))
+    
+    return dx, dgamma, dbeta
+ ```
+ 
+ Now, let's have some quality and intuitive calculus time to get the core understanding of derivation of the gradients calculated in the implementation above. So, take your pen and paper and solve with me!!
+    
+
+
+$$
+\begin{align}
+\frac{\partial C}{\partial \gamma \hat{x_i}} &= \frac{\partial C}{\partial y_i} \times \frac{\partial y_i}{\partial \gamma x_i} \\
+&= \frac{\partial C}{\partial y_i} \times \frac{\partial (\gamma x_i + \beta)}{\partial \gamma x_i} \\
+&= \frac{\partial C}{\partial y_i}
+\end{align}
+$$
+
+
+$$
+\begin{align}
+\frac{\partial C}{\partial \beta} &= \frac{\partial C}{\partial y_i} \times \frac{\partial y_i}{\partial \beta} \\
+&= \frac{\partial C}{\partial y_i} \times \frac{\partial(\gamma x_i + \beta )}{\partial \beta} \\
+&= \sum_{i=1}^m \frac{\partial C}{\partial y_i}
+\end{align}
+$$
+
+
+$$
+\begin{align}
+\frac{\partial C}{\partial \gamma} &= \frac{\partial C}{\partial \gamma \hat{x_i}} \times  \frac{\partial \gamma \hat{x_i}}{\partial \gamma} \\
+&= \sum_{i=1}^m \frac{\partial C }{\partial y_i} \times \hat{x_i}
+\end{align}
+$$
+
+
+We have calculated the gradients for the learnable parameters and now it's time to calculate the input gradient. I had a very rough time to calculate this part, but anyways I will try to explain it in an easy fashion -
     
   
