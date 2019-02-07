@@ -8,3 +8,38 @@ author:     "vishalvatsalya7"
 I recently did an assignment of CS231n stanford course where I was required to derive the gradients for backward pass of Batch Normalization. In this blog post, I will try to explain how I derived the desired gradients from scratch.
 So, first I will go through the algorithm of Batch Normalization and how to perform the forward pass with the implementation in Python.
 
+---
+
+### Forward Pass
+
+In forward pass, we just calculate the mean and variance of the batch and the Normalization is performed to achieve unit Gaussian Distribution. Scaling and shifting is performed with the learnable parameters : $$\gamma$$ and $$\beta $$ which gets updated during the backward pass using the calculated gradients.
+
+$$
+\begin{align}
+\mu_B &= \frac{1}{m}\sum_{i=1}^{m} x_i \\
+\sigma_B^2 &= \frac{1}{m}\sum_{i=1}^{m} (x_i - \mu_B)^2 \\
+\hat{x_i} &= \frac{x_i - \mu_B}{\sqrt{ \sigma_B^2 + \epsilon }} \\
+y_i &= \gamma x_i + \beta
+\end{align}
+$$
+
+Implementation in Python : 
+
+```python
+def batchnorm_forward(x, gamma, beta, eps):
+
+    N, D = x.shape
+    out, cache = None, None
+    xmu = (1./N)*np.sum(x,axis=0)
+    xvar = (1./N)*np.sum((x-xmu)**2,axis=0)
+    inv_var = 1./np.sqrt(xvar+eps)
+    xhat = (x-xmu)*inv_var
+    out = gamma*xhat+beta
+    cache = (xhat,xmu,inv_var,gamma)
+    
+    return out,cache
+```
+
+We have stored the necessary intermediate components which will be required in backward pass.
+    
+  
