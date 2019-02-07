@@ -118,9 +118,9 @@ Now, let's calculate each component indvidually except $$\frac{\partial C}{\part
 
 $$
 \begin{align}
-\frac{\partial \hat{x_i}}{\partial x_i} &= \frac{1}{\sqrt{ \sigma_B^2 + \epsilon }}
-\frac{\partial \mu_B}{\partial x_i} &= \frac{1}{m}
-\frac{\partial \sigma_B^2}{\partial x_i} &= 2(x_i - \mu_B)/m
+\frac{\partial \hat{x_i}}{\partial x_i} &= \frac{1}{\sqrt{ \sigma_B^2 + \epsilon }}\\
+\frac{\partial \mu_B}{\partial x_i} &= \frac{1}{m}\\
+\frac{\partial \sigma_B^2}{\partial x_i} &= 2(x_i - \mu_B)/m\\
 \end{align}
 $$
   
