@@ -97,5 +97,13 @@ $$
 
 
 We have calculated the gradients for the learnable parameters and now it's time to calculate the input gradient. I had a very rough time to calculate this part, but anyways I will try to explain it in an easy fashion -
-    
+
+$$
+\begin{align}
+\frac{\partial C}{\partial \hat{x_i}} &= \frac{\partial C}{\partial y_i} \times \frac{\partial y_i}{\partial \hat{x_i}} \\
+&= \frac{\partial C}{\partial y_i} \times \gamma
+\end{align}
+$$
+
+So, for calculating the gradient of the input gradient, the gradient of \hat{x_i} is required in the chain rule.
   
