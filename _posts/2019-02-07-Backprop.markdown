@@ -110,7 +110,7 @@ We need to calculate $$\frac{\partial C}{\partial x_i}$$ which can be calculated
 
 $$
 \begin{align}
-\frac{\partial C}{\partial x_i} &= \frac{\partial C}{\partial \hat{x_i}} \times \frac{\partial \hat{x_i}}{\partial x_i} + \frac{\partial C}{\partial mu_B} \times \frac{\partial mu_B}{\partial x_i} + \frac{\partial C}{\partial sigma_B^2} \times \frac{\partial sigma_B^2}{\partial x_i}
+\frac{\partial C}{\partial x_i} &= \frac{\partial C}{\partial \hat{x_i}} \times \frac{\partial \hat{x_i}}{\partial x_i} + \frac{\partial C}{\partial \mu_B} \times \frac{\partial \mu_B}{\partial x_i} + \frac{\partial C}{\partial \sigma_B^2} \times \frac{\partial \sigma_B^2}{\partial x_i}
 \end{align}
 $$
 
