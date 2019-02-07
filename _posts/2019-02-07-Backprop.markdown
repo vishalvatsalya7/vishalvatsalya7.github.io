@@ -114,11 +114,11 @@ $$
 \end{align}
 $$
 
-Now, let's calculate each component indvidually except $$\frac{\partial C}{\partial \hat{x_i}}$$ since this has been already calculated above.
+Now, let's calculate each component indvidually except $$\frac{\partial C}{\partial \hat{x_i}}$$ since this has been already calculated above. Take reference from the above equations for calculating normalized inputs.
 
 $$
 \begin{align}
-\frac{\partial \hat{x_i}}{\partial x_i} &= 
+\frac{\partial \hat{x_i}}{\partial x_i} &= \frac{1}{\sqrt{ \sigma_B^2 + \epsilon }}
 \end{align}
 $$
   
