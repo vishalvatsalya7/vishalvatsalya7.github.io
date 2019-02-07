@@ -105,5 +105,5 @@ $$
 \end{align}
 $$
 
-So, for calculating the gradient of the input gradient, the gradient of \hat{x_i} is required in the chain rule.
+So, for calculating the gradient of the input gradient, the gradient of $$\hat{x_i}$$ is required in the chain rule.
   
