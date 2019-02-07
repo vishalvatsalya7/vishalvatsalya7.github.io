@@ -5,14 +5,17 @@ date:       2019-02-07 11:11:00
 author:     "vishalvatsalya7"
 ---
 
-I recently did an assignment of CS231n stanford course where I was required to derive the gradients for backward pass of Batch Normalization. In this blog post, I will try to explain how I derived the desired gradients from scratch.
-So, first I will go through the algorithm of Batch Normalization and how to perform the forward pass with the implementation in Python.
+I recently did an assignment of CS231n stanford course where I was required to derive the gradients for backward pass of Batch Normalization. In this blog post, I will try to explain how I derived the desired gradients from scratch. 
+Why Batch Normalization is used?
+Well, it reduces the amount by what the hidden unit values shift around (covariance shift) and thus it allows us to reduce a deep network.
+
+
 
 ---
 
 ### Forward Pass
 
-In forward pass, we just calculate the mean and variance of the batch and the Normalization is performed to achieve unit Gaussian Distribution. Scaling and shifting is performed with the learnable parameters : $$\gamma$$ and $$\beta $$ which gets updated during the backward pass using the calculated gradients. Here, 'm' is the size of mini-batch for the forward pass.
+In forward pass, we just calculate the mean and variance of the batch and the Normalization is performed to achieve unit Gaussian Distribution. Scaling and shifting is performed with the learnable parameters : $$\gamma$$ and $$\beta $$ which gets updated during the backward pass using the calculated gradients. The forward pass is relatively simple since it only requires standardizing the input features (zero mean and unit standard deviation). Here, 'm' is the size of mini-batch for the forward pass.
 
 $$
 \begin{align}
