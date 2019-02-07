@@ -12,7 +12,7 @@ So, first I will go through the algorithm of Batch Normalization and how to perf
 
 ### Forward Pass
 
-In forward pass, we just calculate the mean and variance of the batch and the Normalization is performed to achieve unit Gaussian Distribution. Scaling and shifting is performed with the learnable parameters : $$\gamma$$ and $$\beta $$ which gets updated during the backward pass using the calculated gradients.
+In forward pass, we just calculate the mean and variance of the batch and the Normalization is performed to achieve unit Gaussian Distribution. Scaling and shifting is performed with the learnable parameters : $$\gamma$$ and $$\beta $$ which gets updated during the backward pass using the calculated gradients. Here, 'm' is the size of mini-batch for the forward pass.
 
 $$
 \begin{align}
@@ -119,6 +119,8 @@ Now, let's calculate each component indvidually except $$\frac{\partial C}{\part
 $$
 \begin{align}
 \frac{\partial \hat{x_i}}{\partial x_i} &= \frac{1}{\sqrt{ \sigma_B^2 + \epsilon }}
+\frac{\partial \mu_B}{\partial x_i} &= \frac{1}{m}
+\frac{\partial \sigma_B^2}{\partial x_i} &= 2(x_i - \mu_B)/m
 \end{align}
 $$
   
