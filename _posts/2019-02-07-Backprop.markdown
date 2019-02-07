@@ -124,3 +124,10 @@ $$
 \end{align}
 $$
   
+Note,that the summation symbol is not present since we are calculating the gradients with respect to each training sample in the mini-batch of size 'm'. Now, let's calculate the rest of the components for calculating $$\frac{\partial C}{\partial x_i}$$.
+
+$$
+\begin{align}
+
+\end{align}
+$$
