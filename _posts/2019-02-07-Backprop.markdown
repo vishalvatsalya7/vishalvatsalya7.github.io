@@ -115,6 +115,7 @@ $$
 $$
 
 Now, let's calculate each component indvidually except $$\frac{\partial C}{\partial \hat{x_i}}$$ since this has been already calculated above.
+
 $$
 \begin{align}
 \frac{\partial \hat{x_i}}{\partial x_i} &= 
