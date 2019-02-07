@@ -106,4 +106,18 @@ $$
 $$
 
 So, for calculating the gradient of the input gradient, the gradient of $$\hat{x_i}$$ is required in the chain rule.
+We need to calculate $$\frac{\partial C}{\partial x_i}$$ which can be calculated using the chain rule, I hope everyone is familiar with it. So, the equation looks like this : 
+
+$$
+\begin{align}
+\frac{\partial C}{\partial x_i} &= \frac{\partial C}{\partial \hat{x_i}} \times \frac{\partial \hat{x_i}}{\partial x_i} + \frac{\partial C}{\partial mu_B} \times \frac{\partial mu_B}{\partial x_i} + \frac{\partial C}{\partial sigma_B^2} \times \frac{\partial sigma_B^2}{\partial x_i}
+\end{align}
+$$
+
+Now, let's calculate each component indvidually except $$\frac{\partial C}{\partial \hat{x_i}}$$ since this has been already calculated above.
+$$
+\begin{align}
+\frac{\partial \hat{x_i}}{\partial x_i} &= 
+\end{align}
+$$
   
