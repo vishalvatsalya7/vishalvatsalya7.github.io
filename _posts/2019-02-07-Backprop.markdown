@@ -13,7 +13,7 @@ So, first I will go through the algorithm of Batch Normalization and how to perf
 ### Forward Pass
 
 In forward pass, we just calculate the mean and variance of the batch and the Normalization is performed to achieve unit Gaussian Distribution. Scaling and shifting is performed with the learnable parameters : $$\gamma$$ and $$\beta $$ which gets updated during the backward pass using the calculated gradients.
-$$mean = \frac{\displaystyle\sum_{i=1}^{n} x_{i}}{n}$$
+
 $$
 \begin{align}
 \mu_B &= \frac{1}{m}\sum_{i=1}^{m} x_i \\
