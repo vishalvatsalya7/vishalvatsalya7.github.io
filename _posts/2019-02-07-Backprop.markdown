@@ -7,7 +7,7 @@ author:     "vishalvatsalya7"
 
 I recently did an assignment of CS231n stanford course where I was required to derive the gradients for backward pass of Batch Normalization. In this blog post, I will try to explain how I derived the desired gradients from scratch. 
 Why Batch Normalization is used?
-Well, it reduces the amount by what the hidden unit values shift around (covariance shift) and thus it allows us to reduce a deep network.
+Well, it reduces the amount by what the hidden unit values shift around (covariance shift) and thus it allows us to train a deep network.
 
 
 
