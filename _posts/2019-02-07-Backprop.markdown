@@ -75,8 +75,8 @@ def batchnorm_backward(dout, cache):
 
 $$
 \begin{align}
-\frac{\partial C}{\partial \gamma \hat{x_i}} &= \frac{\partial C}{\partial y_i} \times \frac{\partial y_i}{\partial \gamma x_i} \\
-&= \frac{\partial C}{\partial y_i} \times \frac{\partial (\gamma x_i + \beta)}{\partial \gamma x_i} \\
+\frac{\partial C}{\partial \gamma \hat{x_i}} &= \frac{\partial C}{\partial y_i} \times \frac{\partial y_i}{\partial \gamma \hat{x_i}} \\
+&= \frac{\partial C}{\partial y_i} \times \frac{\partial (\gamma x_i + \beta)}{\partial \gamma \hat{x_i}} \\
 &= \frac{\partial C}{\partial y_i}
 \end{align}
 $$
