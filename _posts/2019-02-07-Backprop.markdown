@@ -22,7 +22,7 @@ $$
 \mu_B &= \frac{1}{m}\sum_{i=1}^{m} x_i \\
 \sigma_B^2 &= \frac{1}{m}\sum_{i=1}^{m} (x_i - \mu_B)^2 \\
 \hat{x_i} &= \frac{x_i - \mu_B}{\sqrt{ \sigma_B^2 + \epsilon }} \\
-y_i &= \gamma x_i + \beta
+y_i &= \gamma \hat{x_i} + \beta
 \end{align}
 $$
 
@@ -133,6 +133,16 @@ $$
 \begin{align}
 \frac{\partial C}{\partial \mu_B} &= \frac{\partial C}{\partial \hat{x_i}} \times \frac{\partial \hat{x_i}}{\partial \mu_B} + \frac{\partial C}{\partial \sigma_B^2} \times \frac{\partial \sigma_B^2}{\partial \mu_B}\\
 \frac{\partial \hat{x_i}}{\partial \mu_B} &= \frac{-1}{\sqrt{ \sigma_B^2 + \epsilon }}\\
-\frac{\partial \sigma_B^2}{\partial \mu_B} &= \frac{1}{m}\sum_{i=1}^{m} -2(x_i - \mu_B)
+\frac{\partial \sigma_B^2}{\partial \mu_B} &= \frac{1}{m}\sum_{i=1}^{m} -2(x_i - \mu_B)\\
+\frac{\partial C}{\partial \sigma_B^2} &= \frac{\partial C}{\partial \hat{x_i}} \times \frac{\partial \hat{x_i}}{\partial \sigma_B^2}\\
 \end{align}
 $$
+
+Now, let's calculate the value of $$\frac{\partial \hat{x_i}}{\partial \sigma_B^2}$$ which can be calculated easily using Quotient rule.
+$$
+\begin{align}
+\hat{x_i} &= \frac{x_i - \mu_B}{\sqrt{ \sigma_B^2 + \epsilon }} \\
+\frac{\partial \hat{x_i}}{\partial \sigma_B^2} &= 
+\end{align}
+$$
+
