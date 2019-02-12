@@ -132,6 +132,6 @@ Note,that the summation symbol is not present since we are calculating the gradi
 $$
 \begin{align}
 \frac{\partial C}{\partial \mu_B} &= \frac{\partial C}{\partial \hat{x_i}} \times \frac{\partial \hat{x_i}}{\partial \mu_B} + \frac{\partial C}{\partial \sigma_B^2} \times \frac{\partial \sigma_B^2}{\partial \mu_B}\\
-
+\frac{\partial \hat{x_i}}{\partial \mu_B} &= -1/\sqrt{ \sigma_B^2 + \epsilon }\\
 \end{align}
 $$
