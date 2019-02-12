@@ -150,6 +150,10 @@ Now, using the values of $$\frac{\partial C}{\partial \sigma_B^2}$$ and $$\frac{
 After vigorious calculation and several substitution we will get the value of $$\frac{\partial C}{\partial x_i}$$ as
 $$
 \begin{align}
-\frac{\partial C}{\partial x_i} &= \frac{m\frac{\partial C}{\partial \hat{x_i}} - \sum_{j=1}^{m}\frac{\partial C}{\partial \hat{x_j}} - \hat{x_i}\sum_{j=1}^{m}\frac{\partial C}{\partial \hat{x_j}}\hat{x_j}}{m\sqrt{ \sigma_B^2 + \epsilon }}
+\frac{\partial C}{\partial x_i} &= \frac{m\frac{\partial C}{\partial \hat{x_i}} - \sum_{j=1}^{m}\frac{\partial C}{\partial \hat{x_j}} - \hat{x_i}\sum_{j=1}^{m}\frac{\partial C}{\partial \hat{x_j}}\hat{x_j}}{m\sqrt{ \sigma_B^2 + \epsilon }}\\
 \end{align}
 $$
+
+So, we have calculated the required gradients for the backward pass : $$\frac{\partial C}{\partial x_i}$$,  $$\frac{\partial C}{\partial \gamma}$$ and  $$\frac{\partial C}{\partial \beta}$$.  
+
+This was my first attempt in presenting my knowledge in the form of blog. I hope you all will be able to understand this article.
