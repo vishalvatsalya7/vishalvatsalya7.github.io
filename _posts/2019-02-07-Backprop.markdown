@@ -156,4 +156,4 @@ $$
 
 So, we have calculated the required gradients for the backward pass : $$\frac{\partial C}{\partial x_i}$$,  $$\frac{\partial C}{\partial \gamma}$$ and  $$\frac{\partial C}{\partial \beta}$$.  
 
-This was my first attempt in presenting my knowledge in the form of blog. I hope you all will be able to understand this article.
+This was my first attempt in presenting my knowledge in the form of blog. I hope y'all liked it!!
