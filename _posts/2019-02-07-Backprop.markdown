@@ -142,7 +142,7 @@ Now, let's calculate the value of $$\frac{\partial \hat{x_i}}{\partial \sigma_B^
 $$
 \begin{align}
 \hat{x_i} &= \frac{x_i - \mu_B}{\sqrt{ \sigma_B^2 + \epsilon }} \\
-\frac{\partial \hat{x_i}}{\partial \sigma_B^2} &= (-0.5) \times (\hat{x_i} - \mu_B) \times (\sigma_B^2 + \epsilon)^(-1.5)\\ 
+\frac{\partial \hat{x_i}}{\partial \sigma_B^2} &= (-0.5) \times (\hat{x_i} - \mu_B) \times (\sigma_B^2 + \epsilon)^{-1.5}\\ 
 \end{align}
 $$
 
