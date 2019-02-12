@@ -146,3 +146,5 @@ $$
 \end{align}
 $$
 
+Now, using the values of $$\frac{\partial C}{\partial \sigma_B^2}$$ and $$\frac{\partial C}{\partial \mu_B}$$, we can calculate the input gradient $$\frac{\partial C}{\partial x_i}$$. I hope you can substitue the values in the above equations. Just, try out the math, it's real fun!
+
