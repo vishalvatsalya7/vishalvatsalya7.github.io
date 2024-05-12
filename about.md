@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a Software Engineer at Microsoft IDC Hyderabad, India. I am currently working on developing security tools which will make the services secure in M365 infrastructure.
+Vishal is working as part of Azure and OpenAI collaboration in AzureML to fine-tune large OpenAI models optimally and efficiently.
 
 
 ### Contact me
