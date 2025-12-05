@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Vishal is working as part of Azure and OpenAI collaboration in AzureML to fine-tune large OpenAI models optimally and efficiently.
+Vishal is working as Member of Technical Staff at [Microsoft AI Superintelligence](https://microsoft.ai/superintelligence), working on LLM agentic post-training.
 
 
 ### Contact me
